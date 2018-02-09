@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"gitlab.booking.com/go/bmc/devices"
+	"gitlab.booking.com/go/bmc/errors"
 	"gitlab.booking.com/go/bmc/hp"
 	"gitlab.booking.com/go/bmc/httpclient"
 	"gitlab.booking.com/go/dora/model"
@@ -53,7 +54,7 @@ func New(ip string, username string, password string) (chassis *C7000, err error
 	}
 
 	if Rimp.Infra2 == nil {
-		return chassis, httpclient.ErrUnableToReadData
+		return chassis, errors.ErrUnableToReadData
 	}
 
 	return &C7000{ip: ip, username: username, password: password, Rimp: Rimp, client: client}, err
@@ -215,4 +216,9 @@ func (c *C7000) Blades() (blades []*devices.Blade, err error) {
 		}
 	}
 	return blades, err
+}
+
+// Vendor returns bmc's vendor
+func (c *C7000) Vendor() (vendor string) {
+	return hp.VendorID
 }
