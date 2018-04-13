@@ -8,6 +8,7 @@ import (
 	"testing"
 
 	"github.com/spf13/viper"
+	"gitlab.booking.com/go/bmc/devices"
 	"gitlab.booking.com/go/dora/model"
 )
 
@@ -486,5 +487,14 @@ func TestPoweState(t *testing.T) {
 		t.Errorf("Expected answer %v: found %v", expectedAnswer, answer)
 	}
 
+	tearDown()
+}
+
+func TestIDracInterface(t *testing.T) {
+	bmc, err := setup()
+	if err != nil {
+		t.Fatalf("Found errors during the test setup %v", err)
+	}
+	_ = devices.Bmc(bmc)
 	tearDown()
 }
