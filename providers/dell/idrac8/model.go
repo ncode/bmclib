@@ -1,7 +1,7 @@
 package idrac8
 
 //https://10.193.251.5/sysmgmt/2012/server/configgroup/iDRAC.SysLog
-//{"iDRAC.SysLog":{"Port":"514","SysLogEnable":"Enabled","Server1":"provision.anycast.prod.booking.com","Server2":"","Server3":""}}
+//{"iDRAC.SysLog":{"Port":"514","SysLogEnable":"Enabled","Server1":"provision.anycast.example.com","Server2":"","Server3":""}}
 
 type Syslog struct {
 	Port    string `json:"Port"`
@@ -36,7 +36,7 @@ type User struct {
 
 //GET - params as query string
 //ntp servers
-//https://10.193.251.10/data?set=tm_ntp_int_opmode:1,tm_ntp_str_server1:ntp0.lhr4.prod.booking.com,tm_ntp_str_server2:ntp0.ams4.prod.booking.com,tm_ntp_str_server3:ntp0.fra4.prod.booking.com
+//https://10.193.251.10/data?set=tm_ntp_int_opmode:1,tm_ntp_str_server1:ntp0.lhr4.example.com,tm_ntp_str_server2:ntp0.ams4.example.com,tm_ntp_str_server3:ntp0.fra4.example.com
 type NtpServer struct {
 	Enable  bool   `url:"tm_ntp_int_opmode,int"`
 	Server1 string `url:"tm_ntp_str_server1"`
@@ -50,7 +50,7 @@ type NtpServer struct {
 //        - requests can be either POST or GET except for the final one - postset?ldapconf
 //POST/GET
 //Setup ldap server
-//https://10.193.251.10/data?set=xGLServer:ldaps.prod.booking.com
+//https://10.193.251.10/data?set=xGLServer:ldaps.example.com
 //Set object class
 // set=xGLSearchFilter:objectClass\=posixAccount
 //Set ldap groups

@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/spf13/viper"
-	"gitlab.booking.com/go/bmc/devices"
+	"github.com/ncode/bmclib/devices"
 	"gitlab.booking.com/go/dora/model"
 )
 

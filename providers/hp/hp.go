@@ -1,6 +1,6 @@
 package hp
 
-import "gitlab.booking.com/go/bmc/devices"
+import "github.com/ncode/bmclib/devices"
 
 const (
 	// VendorID represents the id of the vendor across all packages

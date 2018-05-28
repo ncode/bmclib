@@ -1,7 +1,7 @@
 package devices
 
 import (
-	"gitlab.booking.com/go/bmc/cfgresources"
+	"github.com/ncode/bmclib/cfgresources"
 )
 
 // Bmc represents the requirement of items to be collected a server

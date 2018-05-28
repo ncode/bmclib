@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"gitlab.booking.com/go/bmc/devices"
+	"github.com/ncode/bmclib/devices"
 )
 
 const (

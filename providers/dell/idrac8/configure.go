@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 	log "github.com/sirupsen/logrus"
-	"gitlab.booking.com/go/bmc/cfgresources"
+	"github.com/ncode/bmclib/cfgresources"
 	"reflect"
 	"runtime"
 	"strconv"
@@ -314,9 +314,9 @@ func (i *IDrac8) applyNtpServerParam(cfg *cfgresources.Ntp) {
 	}
 
 	//https://10.193.251.10/data?set=tm_ntp_int_opmode:1, \\
-	//                               tm_ntp_str_server1:ntp0.lhr4.prod.booking.com, \\
-	//                               tm_ntp_str_server2:ntp0.ams4.prod.booking.com, \\
-	//                               tm_ntp_str_server3:ntp0.fra4.prod.booking.com
+	//                               tm_ntp_str_server1:ntp0.lhr4.example.com, \\
+	//                               tm_ntp_str_server2:ntp0.ams4.example.com, \\
+	//                               tm_ntp_str_server3:ntp0.fra4.example.com
 	queryStr := fmt.Sprintf("set=tm_ntp_int_opmode:%d,", enable)
 	queryStr += fmt.Sprintf("tm_ntp_str_server1:%s,", cfg.Server1)
 	queryStr += fmt.Sprintf("tm_ntp_str_server2:%s,", cfg.Server2)

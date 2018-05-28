@@ -12,10 +12,10 @@ import (
 	"strings"
 
 	log "github.com/sirupsen/logrus"
-	"gitlab.booking.com/go/bmc/dell"
-	"gitlab.booking.com/go/bmc/devices"
-	"gitlab.booking.com/go/bmc/errors"
-	"gitlab.booking.com/go/bmc/httpclient"
+	"github.com/ncode/bmclib/dell"
+	"github.com/ncode/bmclib/devices"
+	"github.com/ncode/bmclib/errors"
+	"github.com/ncode/bmclib/httpclient"
 )
 
 const (

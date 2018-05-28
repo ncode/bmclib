@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"fmt"
 	log "github.com/sirupsen/logrus"
-	"gitlab.booking.com/go/bmc/cfgresources"
+	"github.com/ncode/bmclib/cfgresources"
 	"reflect"
 	"strings"
 )
@@ -137,7 +137,7 @@ func (c *C7000) applyLdapParams(cfg *cfgresources.Ldap) {
 
 // Apply Ldap server config params
 // <hpoa:setLdapInfo4>
-//   <hpoa:directoryServerAddress>provision.anycast.prod.booking.com</hpoa:directoryServerAddress>
+//   <hpoa:directoryServerAddress>provision.anycast.example.com</hpoa:directoryServerAddress>
 //   <hpoa:directoryServerSslPort>636</hpoa:directoryServerSslPort>
 //   <hpoa:directoryServerGCPort>0</hpoa:directoryServerGCPort>
 //   <hpoa:userNtAccountNameMapping>false</hpoa:userNtAccountNameMapping>
@@ -663,8 +663,8 @@ func (c *C7000) setUserPassword(user string, password string) (err error) {
 // 2. SOAP call to set TZ
 // 1.
 // <hpoa:configureNtp>
-//   <hpoa:ntpPrimary>ntp0.prod.booking.com</hpoa:ntpPrimary>
-//   <hpoa:ntpSecondary>ntp1.prod.booking.com</hpoa:ntpSecondary>
+//   <hpoa:ntpPrimary>ntp0.example.com</hpoa:ntpPrimary>
+//   <hpoa:ntpSecondary>ntp1.example.com</hpoa:ntpSecondary>
 //   <hpoa:ntpPoll>720</hpoa:ntpPoll>
 //  </hpoa:configureNtp>
 // 2.
