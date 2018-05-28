@@ -83,9 +83,9 @@ type LoginSecurityParams struct {
 type DatetimeParams struct {
 	SessionToken          string `url:"ST2"`                      //ST2=ba9a6bbf88764c829ca4f49146fd4817
 	NtpEnable             bool   `url:"NTP_enable,int"`           //NTP_enable=1
-	NtpServer1            string `url:"NTP_server1"`              //NTP_server1=ntp0.dev.booking.com
-	NtpServer2            string `url:"NTP_server2"`              //NTP_server2=ntp2.dev.booking.com
-	NtpServer3            string `url:"NTP_server3"`              //NTP_server3=ntp3.dev.booking.com
+	NtpServer1            string `url:"NTP_server1"`              //NTP_server1=ntp0.example.com
+	NtpServer2            string `url:"NTP_server2"`              //NTP_server2=ntp2.example.com
+	NtpServer3            string `url:"NTP_server3"`              //NTP_server3=ntp3.example.com
 	DateTimeChanged       bool   `url:"datetimeChanged,int"`      //datetimeChanged=0
 	CmcTimeTimezoneString string `url:"CMC_TIME_timezone_string"` //CMC_TIME_timezone_string=CET
 	TzChanged             bool   `url:"tzChanged,int"`            //tzChanged=1
@@ -155,7 +155,7 @@ type InterfaceParams struct {
 	SnmpProtocol                     int    `url:"SNMP_Protocol"`                            //SNMP_Protocol=0
 	SnmpDiscoveryPortSet             int    `url:"SNMP_DiscoveryPort_set"`                   //SNMP_DiscoveryPort_set=161
 	ChassisLoggingRemoteSyslogEnable bool   `url:"CHASSIS_LOGGING_remote_syslog_enable,int"` //CHASSIS_LOGGING_remote_syslog_enable=1
-	ChassisLoggingRemoteSyslogHost1  string `url:"CHASSIS_LOGGING_remote_syslog_host_1"`     //CHASSIS_LOGGING_remote_syslog_host_1=provision.anycast.example.com
+	ChassisLoggingRemoteSyslogHost1  string `url:"CHASSIS_LOGGING_remote_syslog_host_1"`     //CHASSIS_LOGGING_remote_syslog_host_1=machine.example.com
 	ChassisLoggingRemoteSyslogHost2  string `url:"CHASSIS_LOGGING_remote_syslog_host_2"`     //CHASSIS_LOGGING_remote_syslog_host_2=
 	ChassisLoggingRemoteSyslogHost3  string `url:"CHASSIS_LOGGING_remote_syslog_host_3"`     //CHASSIS_LOGGING_remote_syslog_host_3=
 	ChassisLoggingRemoteSyslogPort   int    `url:"CHASSIS_LOGGING_remote_syslog_port"`       //CHASSIS_LOGGING_remote_syslog_port=514
