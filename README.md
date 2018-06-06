@@ -2,5 +2,4 @@
 
 Library to interact with bmcs from different vendors
 
-###
-This project has moved to http://github.com/bmc-toolbox/bmclib
+## project moved to http://github.com/bmc-toolbox/bmclib
